@@ -12,7 +12,12 @@ var notes = require('./routes/notes');
 var app = express();
 
 //set up DB
-mongoose.connect('mongodb://localhost/notes');
+if (app.get('env') === 'development') {
+  mongoose.connect('mongodb://localhost/notes');
+}
+else {
+  mongoose.connect(process.env.MONGOLAB_URI);
+}
 mongoose.connection.on('error', function(err) {
   console.error('MongoDB connection error: ' + err);
   process.exit(-1);
@@ -44,7 +49,6 @@ app.use(function(req, res, next) {
 });
 
 // error handlers
-
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
