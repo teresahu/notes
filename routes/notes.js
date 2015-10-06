@@ -2,11 +2,6 @@ var express = require('express');
 var router = express.Router();
 var Note = require('../models/note');
 
-// var notes = [
-//   { _id: 0, title: 'Groceries', completed: false },
-//   { _id: 1, title: 'Learn Mongoose', completed: true }
-// ];
-
 // INDEX
 router.get('/', function(req, res) {
   Note.find({}, function(err, notes) {
@@ -33,6 +28,7 @@ router.get('/:id', function(req, res) {
 
 // CREATE
 router.post('/', function(req, res) {
+  console.log('req.body:', req.body);
   var note = {
     title: req.body.title,
     content: req.body.content
@@ -51,6 +47,7 @@ router.get('/:id/edit', function(req, res) {
 
 // UPDATE
 router.put('/:id', function(req, res) {
+  console.log('PUT');
   Note.findById(req.params.id, function(err, note) {
     if (err) console.log('ERROR:', err); //app will hang here
     else if (!note) {
@@ -70,6 +67,7 @@ router.put('/:id', function(req, res) {
 
 // DESTROY
 router.delete('/:id', function(req, res) {
+  console.log('DELETE');
   Note.findByIdAndRemove(req.params.id, function(err, note) {
     res.redirect('/');
   });

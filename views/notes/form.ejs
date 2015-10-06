@@ -1,14 +1,18 @@
-<div class="form-group">
-  <input type="text"
-         class="form-control"
-         id="title"
-         name="title"
-         placeholder="title"
-         aria-label="title"
-         value="<%= note.title %>">
-  </input>
+<div class="row">
+  <div class="form-group col-xs-12 col-sm-12">
+    <input type="text"
+           class="form-control"
+           id="title"
+           name="title"
+           placeholder="title"
+           aria-label="title"
+           value="<%= note.title %>">
+    </input>
+  </div>
 </div>
 
-<div class="form-group">
-  <textarea class="form-control" rows="22" placeholder="content" id="content" name="content" aria-label="content" wrap="hard"><%= note.content %></textarea>
+<div class="row">
+  <div class="form-group col-xs-12 col-sm-12">
+    <textarea class="form-control" rows="22" placeholder="content" id="content" name="content" aria-label="content" wrap="hard"><%= note.content %></textarea>
+  </div>
 </div>

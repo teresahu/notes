@@ -2,11 +2,11 @@
 
       <main>
         <div>
-          <% include form %>
+          <form class="note-form" action="/<%= note._id %>?_method=PUT" method="post"><button type="submit" id="update-note" class="icon glyphicon glyphicon-save"></button>
+            <% include form %>
+          </form>
         </div>
       </main>
-
-
-    </body>
-  <div>
+    <div>
+  </body>
 </html>

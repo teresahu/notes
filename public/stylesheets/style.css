@@ -9,7 +9,17 @@ ul {
 }
 
 #notes li {
-  margin: 20px auto;
+  margin: 20px 40px 0px 0px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+#notes a {
+  color: #222;
+}
+
+#notes a:hover {
+  text-decoration: none;
 }
 
 .pull-right li {
@@ -30,4 +40,61 @@ ul {
   color: #777;
   margin: 10px;
   font-size: 22px;
+}
+
+#search {
+  position: fixed;
+  top: 8px;
+  right: 20px;
+  z-index: 1100;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+#update-note, #create-note {
+  position: fixed;
+  top: 2px;
+  right: 0px;
+  z-index: 1100;
+  border: none;
+  background: none;
+  padding: 0;
+  color: #5cb85c;
+}
+
+#update-note:hover, #create-note:hover {
+  color: #4cae4c;
+}
+
+#delete-note {
+  position: fixed;
+  top: 2px;
+  right: 50px;
+  z-index: 1100;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.glyphicon {
+  font-size: 23px;
+}
+
+.icon {
+  margin: 12px 24px;
+  color: #777;
+}
+
+.icon:hover {
+  color: #333;
+}
+
+
+#search {
+  margin-top: 5px;
+}
+
+.btn-success {
+  border: none;
 }

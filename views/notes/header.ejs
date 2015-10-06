@@ -6,20 +6,20 @@
     <link rel="stylesheet" href="stylesheets/style.css">
   </head>
 
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/">
-        <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/185964-200.png" height="35px">
-      </a>
+  <body>
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/185964-200.png" height="35px">
+          </a>
 
-      <ul class="pull-right">
-        <li><form action="/<%= note._id %>?_method=DELETE" method="post"><button type="submit" class="btn btn-small btn-danger navbar-btn">Delete</button>
-        </form></li>
-        <li><form class="note-form" action="/" method="post"><button type="submit" class="btn btn-small btn-success navbar-btn">Save</button>
-        </form></li>
-      </ul>
-    </div>
-  </nav>
+          <% if (note._id) { %>
+            <ul>
+              <li><form action="/<%= note._id %>?_method=DELETE" method="post"><button id="delete-note" type="submit" class="icon glyphicon glyphicon-trash"</button>
+              </form></li>
+            </ul>
+          <% } %>
+        </div>
+      </nav>
 
-  <div class="container-fluid">
-    <body>
+      <div class="container-fluid">
