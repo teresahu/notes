@@ -6,28 +6,27 @@
     <link rel="stylesheet" href="stylesheets/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <a id="logo" class="navbar-brand" href="/">
+          <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/185964-200.png" height="35px">
+        </a>
+        <p id="app-title">Notes</p>
 
-  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <a href="#" class="navbar-brand"><span id="search" class="glyphicon glyphicon-search"></span></a>
+      </div>
+    </nav>
+
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">
-        <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/185964-200.png" height="35px">
-      </a>
-      <p class="text-center">Notes</p>
-
-      <a href="#" class="navbar-brand"><span id="search" class="glyphicon glyphicon-search"></span></a>
-    </div>
-  </nav>
-
-  <div class="container-fluid">
-    <body>
-      <% notes.forEach(function(note) { %>
-        <div class="row">
-          <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 note">
-            <a href="/<%= note._id %>"><%= note.title %></a>
+        <% notes.forEach(function(note) { %>
+          <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 note">
+              <a href="/<%= note._id %>"><%= note.title %></a>
+            </div>
           </div>
-        </div>
-      <% }) %>
-    </body>
-  <div>
-  <% include footer %>
+        <% }) %>
+    <div>
+    <% include footer %>
+  </body>
 </html>

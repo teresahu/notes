@@ -23,8 +23,22 @@ ul {
   text-decoration: none;
 }
 
-.pull-right li {
-  display: inline-block;
+.glyphicon {
+  font-size: 23px;
+}
+
+/* NAVBAR */
+@media screen and (max-width: 768px) {
+    #logo {
+      position: fixed;
+      left: 4px;
+    }
+}
+@media screen and (min-width: 768px) {
+    #logo {
+      position: fixed;
+      left: 20px;
+    }
 }
 
 .navbar-brand {
@@ -34,13 +48,6 @@ ul {
 
 .navbar {
   text-align: center;
-}
-
-.navbar p {
-  display: inline-block;
-  color: #777;
-  margin: 10px;
-  font-size: 22px;
 }
 
 #search {
@@ -78,8 +85,15 @@ ul {
   padding: 0;
 }
 
-.glyphicon {
-  font-size: 23px;
+#app-title {
+  display: inline-block;
+  color: #777;
+  margin: 10px;
+  font-size: 22px;
+  left: 48%;
+  top: 30%;
+  position: fixed;
+  transform: translate(-50%, -50%);
 }
 
 .icon {
@@ -99,6 +113,7 @@ ul {
   border: none;
 }
 
+/* FORM FIELDS */
 .form-group {
   /*padding: 0;*/
   margin: 0;
