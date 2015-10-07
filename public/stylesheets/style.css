@@ -111,18 +111,18 @@ ul {
 
 .btn-success {
   border: none;
+  line-height: 1.5;
 }
 
 /* FORM FIELDS */
 .form-group {
-  /*padding: 0;*/
   margin: 0;
 }
 
 #title {
   font-size: 20px;
   height: 50px;
-  vertical-align: -10px;
+  line-height: 2.6;
   border-radius: 0px;
   border: 0;
   border-bottom: 1px solid #ccc;
